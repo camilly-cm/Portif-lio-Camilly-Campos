@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+:root{
+    --cor-primaria: #040D12;
+    --cor-secundaria: #E1F7F5;
+    --cor-terciaria: #93B1A6;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    padding: 5% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.apresentacao {
+    padding: 5% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Problemas do formação até o momento:
+    - a margem ou o padding entre o cabceçalho e a section
+    -como tentar resolver?
+    --posso pegar a formatação do anterior.
+*/
+
+.apresentacao__projetos{
+    /* margin: 15%; */
+    padding: 0% 15% 0% 15%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;;
+}
+
+.apresentacao__projetos__titulo{
+    font-size: 1.80rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__projetos__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    color: white;
+}
+.apresentacao__habilidades {
+    padding: 0% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.apresentacao__conteudo {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.0rem;
+    font-family: var(--fonte-primaria);
+}
+
+.destaque-titulo {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.apresentacao__subtitulo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400px;
+    color: var(--cor-terciaria)
+}
+
+.configuracao__imagem{
+    max-height: 600px;
+    width: 50%;
+}
+.configuracao__imagem__projeto1{
+    max-height: 600px;
+    width: 50%;
+}
+.configuracao__imagem__projeto2{
+    max-height: 600px;
+    width: 50%;
+}
+
+
+.rodape{
+    padding: 24px;
+    text-align: center;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    font-size: 1.125rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+@media (max-width: 1020px) {
+    /* .cabecalho{
+        padding: 10% 15% 0% 15%;
+    } */
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        padding: 5% 15%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
+
+.apresentacao__projeto__academico{
+    padding: 0% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+@media screen and (max-width: 1020px){
+    .apresentacao__habilidades{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .apresentacao__conteudo{
+        order: 1;
+    }
+    .configuracao__imagem{
+        order:2;
+    }
+}
+
+@media screen {
+    .apresentacao__projeto__academico{
+        display: flex;
+        flex-direction: column;
+    }
+    .configuracao__imagem__projeto1 {
+        order:2;
+    }
+    .configuracao__imagem__projeto2{
+        order:3;
+    }
+}
+@media screen and (max-width: 720px) {
+    .cabecalho__menu{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 30px;
+    }}
